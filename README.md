@@ -1,2 +1,1 @@
-![Alt text](image.png)
-
+C:\Users\CCL\Desktop\takeMed\frontend\medication-reminder-app\public\reminder-app.png
