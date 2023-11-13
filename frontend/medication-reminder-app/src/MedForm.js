@@ -11,7 +11,7 @@ function MedForm() {
       const [medicationName, setMedicationName] = useState('');
       const [submitForm, setSubmitForm] = useState(false);
       
-      const [selectedFrequency, setSelectedFrequency] = useState('morning');
+
     
       const handleSendReminder = useCallback(async () => {
         // Your logic for sending reminders
@@ -22,7 +22,6 @@ function MedForm() {
           const requestData = {
             phone_number: phoneNumber,
             medication_name: medicationName,
-            frequency: selectedFrequency,
           };
     
           // Send POST request to Flask backend
@@ -32,11 +31,10 @@ function MedForm() {
           // Reset form fields after sending the reminder
          setPhoneNumber('');
          setMedicationName('');
-         setSelectedFrequency('morning');
         } catch (error) {
           console.error('Error sending reminder:', error);
         }
-      }, [medicationName, phoneNumber, selectedFrequency]);
+      }, [medicationName, phoneNumber]);
 
       const handleSubmit = (e) => {
         e.preventDefault();
@@ -84,17 +82,6 @@ function MedForm() {
               onChange={(e) => setMedicationName(e.target.value)}
               placeholder="Enter the medication name"
             />
-            
-            <label htmlFor="selectedFrequency">Select Frequency:</label>
-            <select
-              id="selectedFrequency"
-              value={selectedFrequency}
-              onChange={(e) => setSelectedFrequency(e.target.value)}
-            >
-              <option value="morning">Morning</option>
-              <option value="afternoon">Afternoon</option>
-              <option value="evening">Evening</option>
-            </select>
             <button type='submit' disabled={!isFormFilled}>Set Reminder</button>
           </form>
         </div>
