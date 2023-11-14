@@ -73,7 +73,7 @@ function MedForm() {
               onChange={(e) => setPhoneNumber(e.target.value)}
               placeholder="Enter your phone number"
             />
-            {/* ... other input fields ... */}
+            
             <label htmlFor="medicationName">Medication Name:</label>
             <input
               type="text"
