@@ -26,7 +26,7 @@ def send_reminder():
         # Send SMS
         message = client.messages.create(
             body=message_body,
-            from_='+14088374661',
+            from_=+14088374661,
             to=user_phone_number
         )
 
