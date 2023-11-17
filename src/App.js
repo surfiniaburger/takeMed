@@ -8,7 +8,7 @@ function App() {
   const {isLoading, error} = useAuth0
   return (
     <div className="App">
-      <h1>Auth0 Login</h1>
+      <h1>Remind a love one...</h1>
       {error && <p>Authentication Error</p>}
       {!error && isLoading && <p>Loading...</p>}
       {!error && !isLoading && (
