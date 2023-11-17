@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
 import './App.css';
 
@@ -6,7 +7,7 @@ import './App.css';
 function MedForm() {
     
     
-    
+      const { isAuthenticated } = useAuth0();
       const [phoneNumber, setPhoneNumber] = useState('');
       const [medicationName, setMedicationName] = useState('');
       const [submitForm, setSubmitForm] = useState(false);
@@ -62,7 +63,8 @@ function MedForm() {
       
     
       return (
-        <div className="app-container">
+        isAuthenticated && (
+          <div className="app-container">
           <h1>Medication Reminder App</h1>
           <form className="reminder-form" onSubmit={handleSubmit}>
             <label htmlFor="phoneNumber">Phone Number:</label>
@@ -85,7 +87,9 @@ function MedForm() {
             <button type='submit' disabled={!isFormFilled}>Set Reminder</button>
           </form>
         </div>
-      );
+          )
+      )
+        
     
 }
 
