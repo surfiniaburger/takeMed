@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
 import './comp.css';
 
 
 
 function Content() {
-      
+      const { isAuthenticated } = useAuth0();
       const [phoneNumber, setPhoneNumber] = useState('');
       const [medicationName, setMedicationName] = useState('');
       const [submitForm, setSubmitForm] = useState(false);
@@ -49,6 +50,7 @@ function Content() {
       }, [handleSendReminder, submitForm]); // Include handleSendReminder in the dependency array
       const isFormFilled = phoneNumber !== '' && medicationName !== '';
       return (
+        isAuthenticated && (
         
           <div className="app-container">
             
@@ -72,8 +74,8 @@ function Content() {
             />
             <button type='submit' disabled={!isFormFilled}>Send Reminder</button>
           </form>
-        </div>
-          
+         </div>
+        )
       )
 }
 
