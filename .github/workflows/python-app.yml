@@ -31,8 +31,7 @@ jobs:
     - name: Run CI/CD script
       run: |
         # Continuous Integration and Continuos deployment
-        chmod +x scripts/ci_cd.py
-        taipy run scripts/ci_cd.py
+        python C:\Users\CCL\Desktop\takeMed\backend\scripts\ci_cd.py
         
     - name: Debugging
       run: |
