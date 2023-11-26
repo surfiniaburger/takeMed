@@ -31,7 +31,7 @@ jobs:
     - name: Run CI/CD script
       run: |
         # Continuous Integration and Continuos deployment
-        python ci_cd.py
+        python backend/ci_cd.py
         
     - name: Debugging
       run: |
