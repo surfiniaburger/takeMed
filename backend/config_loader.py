@@ -6,6 +6,7 @@ class Config:
         self.data = data
 
 def load_config_from_file(file_path):
+    file_path = "/home/runner/work/takeMed/takeMed/backend/config.yaml"
     with open(file_path, 'r') as file:
         data = yaml.load(file, Loader=yaml.FullLoader)
     return Config(data)

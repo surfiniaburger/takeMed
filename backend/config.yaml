@@ -1,1 +1,1 @@
-config = load_config_from_file("C:/Users/CCL/Desktop/takeMed/config.yaml")
+config = load_config_from_file("/home/runner/work/takeMed/takeMed/backend/config.yaml")
