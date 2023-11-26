@@ -32,7 +32,7 @@ jobs:
       run: |
         # Continuous Integration and Continuos deployment
         chmod +x scripts/ci_cd.py
-        taipy scripts/ci_cd.py
+        taipy run scripts/ci_cd.py
         
     - name: Debugging
       run: |
