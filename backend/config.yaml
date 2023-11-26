@@ -1,0 +1,1 @@
+config = load_config_from_file("C:/Users/CCL/Desktop/takeMed/config.yaml")

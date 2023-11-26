@@ -1,0 +1,5 @@
+INFO:Taipy:Development mode: Clean all entities of version 95eab5b7-d4f5-4a99-bd88-e175b5d8ea6b
+INFO:Taipy:Development mode: Clean all entities of version b3a412aa-65ee-44df-aecd-789c1bc9e430
+INFO:Taipy:Development mode: Clean all entities of version b3a412aa-65ee-44df-aecd-789c1bc9e430
+INFO:Taipy:Development mode: Clean all entities of version b3a412aa-65ee-44df-aecd-789c1bc9e430
+INFO:Taipy:Development mode: Clean all entities of version b3a412aa-65ee-44df-aecd-789c1bc9e430
