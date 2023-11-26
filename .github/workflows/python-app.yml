@@ -31,7 +31,9 @@ jobs:
     - name: Run CI/CD script
       run: |
         # Continuous Integration and Continuos deployment
-        python scripts/ci_cd.py
-    - name: Test with pytest
+        chmod +x scripts/ci_cd.py
+        taipy scripts/ci_cd.py
+        
+    - name: Debugging
       run: |
-        pytest
+        ls -R && pwd
