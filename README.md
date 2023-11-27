@@ -1,7 +1,6 @@
 
 
-
-![Alt text](image-4.png)
+![Alt text](<Screenshot (209)-1.png>)
 Medication reminder App is an app to help young souls remind their everlasting seniors to take their medication.
 
 The app as a React Frontend, Python (Flask) Backend, Twilio as a text messenger and Auth0 for user authentication.
