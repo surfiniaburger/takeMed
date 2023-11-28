@@ -10,6 +10,7 @@ function MedForm() {
       const [phoneNumber, setPhoneNumber] = useState('');
       const [medicationName, setMedicationName] = useState('');
       const [submitForm, setSubmitForm] = useState(false);
+      const [responseMessage, setResponseMessage] = useState('');
 
       const handleSendReminder = useCallback(async () => {
         // Your logic for sending reminders
@@ -48,6 +49,7 @@ function MedForm() {
           // Perform any cleanup here (if needed)
         };
       }, [handleSendReminder, submitForm]); // Include handleSendReminder in the dependency array
+
       const isFormFilled = phoneNumber !== '' && medicationName !== '';
       return (
         isAuthenticated && (
@@ -73,6 +75,11 @@ function MedForm() {
             />
             <button type='submit' disabled={!isFormFilled}>Set Reminder</button>
           </form>
+          {responseMessage && (
+            <div className={responseMessage.includes('Error') ? 'error-message' : 'success-message'}>
+          {responseMessage}
+        </div>
+      )}
         </div>
           )
       )

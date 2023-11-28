@@ -33,3 +33,13 @@
 .result-block-container .result-block {
   opacity: 1;
 }
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+.success-message {
+  color: yellow;
+  font-weight: bold;
+}
