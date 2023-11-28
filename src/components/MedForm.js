@@ -40,10 +40,21 @@ function MedForm() {
       useEffect(() => {
         // This effect will run when the component mounts
         if (submitForm) {
-            handleSendReminder();
-            // Reset submitForm state after sending the reminder
-            setSubmitForm(false);
-          }
+          handleSendReminder()
+            .then((response) => {
+              // Set the response message in the state
+              setResponseMessage(response);
+            })
+            .catch((error) => {
+              // Handle errors if needed
+              console.error('Error sending reminder:', error);
+              setResponseMessage(`Error: ${error.message}`);
+            })
+            .finally(() => {
+              // Reset submitForm state after sending the reminder
+              setSubmitForm(false);
+            });
+        }
         // Cleanup function (if needed)
         return () => {
           // Perform any cleanup here (if needed)
