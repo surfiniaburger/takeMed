@@ -1,4 +1,5 @@
 
+![Alt text](image.png)
 
 ![Alt text](<Screenshot (209)-1.png>)
 Medication reminder App is an app to help young souls remind their everlasting seniors to take their medication.
