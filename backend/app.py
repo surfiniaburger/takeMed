@@ -68,15 +68,13 @@ def send_reminder():
 
         # Store the reminder in MongoDB with the timestamp
         reminder_collection.insert_one({'timestamp': timestamp, 'reminder_data': reminder_data})
-        
-        
 
 
         return jsonify({'message_sid': message.sid}), 200
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-    
+
 
 # API endpoint to get reminder history
 @app.route('/get-reminders', methods=['GET'])

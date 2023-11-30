@@ -1,7 +1,7 @@
 
 ![Alt text](image.png)
 
-![Alt text](<Screenshot (209)-1.png>)
+
 Medication reminder App is an app to help young souls remind their everlasting seniors to take their medication.
 
 The app as a React Frontend, Python (Flask) Backend, Twilio as a text messenger, taipy as CI/CD pipeline and Auth0 for user authentication.
@@ -22,4 +22,5 @@ Once you power the react app with  `npm start`, start the redis server with `red
 - Navigate to Reminder log to view a list of previous reminders with their time stamps
 - Delete Previous logs
 
+![Alt text](<Screenshot (209)-1.png>)
 ![Alt text](<Screenshot 2023-11-18 at 01.42.17-1.png>)
