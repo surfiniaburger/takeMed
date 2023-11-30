@@ -45,30 +45,42 @@ const NavBar = () => {
           
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
-            <Nav className="mr-auto" navbar>
-              <NavItem>
-                <NavLink
-                  tag={RouterNavLink}
-                  to="/"
-                  exact
-                  activeClassName="router-link-exact-active"
-                >
-                  Home
-                </NavLink>
-              </NavItem>
-              {isAuthenticated && (
-                <NavItem>
-                  <NavLink
-                    tag={RouterNavLink}
-                    to="/external-api"
-                    exact
-                    activeClassName="router-link-exact-active"
-                  >
-                    External API
-                  </NavLink>
-                </NavItem>
-              )}
-            </Nav>
+          <Nav className="mr-auto" navbar>
+  <NavItem>
+    <NavLink
+      tag={RouterNavLink}
+      to="/"
+      exact
+      activeClassName="router-link-exact-active"
+    >
+      Home
+    </NavLink>
+  </NavItem>
+  {isAuthenticated && (
+    <>
+      <NavItem>
+        <NavLink
+          tag={RouterNavLink}
+          to="/external-api"
+          exact
+          activeClassName="router-link-exact-active"
+        >
+          External API
+        </NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink
+          tag={RouterNavLink}
+          to="/reminder-log" // Add this line for the Reminder Log link
+          exact
+          activeClassName="router-link-exact-active"
+        >
+          Reminder Log
+        </NavLink>
+      </NavItem>
+    </>
+  )}
+</Nav>
             <Nav className="d-none d-md-block" navbar>
               {!isAuthenticated && (
                 <NavItem>

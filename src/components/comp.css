@@ -44,3 +44,21 @@
     color: #fff;
   }
   
+
+
+.reminder-log {
+  color: white;
+}
+
+.reminder-log h2 {
+  color: white;
+}
+
+.reminder-log ul {
+  list-style: none;
+  padding: 0;
+}
+
+.reminder-log li {
+  margin-bottom: 10px;
+}

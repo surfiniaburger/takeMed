@@ -8,6 +8,9 @@ flask = "*"
 twilio = "*"
 taipy = "*"
 redis = "*"
+pymongo = "*"
+werkzeug = "==3.0.0"
+waitress = "*"
 
 [dev-packages]
 

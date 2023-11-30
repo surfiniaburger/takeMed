@@ -3,7 +3,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
 import './App.css';
 import LogoutButton from './LogoutButton';
-
+import ReminderLog from './ReminderLog';
 
 function MedForm() {
       const { isAuthenticated } = useAuth0();
@@ -91,6 +91,8 @@ function MedForm() {
           {responseMessage}
         </div>
       )}
+
+         <ReminderLog />
         </div>
           )
       )
