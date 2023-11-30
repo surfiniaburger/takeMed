@@ -62,7 +62,7 @@ def send_reminder():
             from_=+14088374661,
             to=user_phone_number
         )
-        
+
         # Cache the data to prevent duplicate reminders
         redis_client.setex(cache_key, 3600, json.dumps({'reminder_sent': True}))
 

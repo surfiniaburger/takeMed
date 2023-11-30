@@ -6,7 +6,7 @@ Medication reminder App is an app to help young souls remind their everlasting s
 
 The app as a React Frontend, Python (Flask) Backend, Twilio as a text messenger, taipy as CI/CD pipeline and Auth0 for user authentication.
 
-Once you power the react app with  `npm start`, start the redis server with `redis-server`, and  you run `cd backend && pipenv run python app.py` , everything afterwards is seemlessly straightforward. Don't forget to install all dependencies by opening two seperate terminals
+Once you power the react app with  `npm start`, start the redis server with `redis-server`, and  you run `cd backend && waitress-serve --host=127.0.0.1 --port=5000 app:app` , everything afterwards is seemlessly straightforward. Don't forget to install all dependencies by opening two seperate terminals
  ```npm install```
 
   and
