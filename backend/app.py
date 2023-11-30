@@ -42,11 +42,11 @@ def send_reminder():
         data = request.get_json()
         user_phone_number = data.get('phone_number')
         medication_name = data.get('medication_name')
-        
+
         # Check if the data is in the cache
         cache_key = f"{user_phone_number}:{medication_name}"
         cached_data = redis_client.get(cache_key)
-        
+
         # Add timestamp to the reminder data
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         reminder_data = {'phone_number': user_phone_number, 'medication_name': medication_name, 'timestamp': timestamp}

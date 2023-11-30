@@ -15,12 +15,13 @@ Once you power the react app with  `npm start`, start the redis server with `red
 
 ## Steps
 
--Login with your Google account or preferred provider
--Enter your Love one phone number and the medication.
-- Click send reminder
+- If you don't have a twilio account make sure you sign up for a free trial account.
+- Login to the takeMed app with your Google account or preferred provider.
+- Enter your Love one phone number and the medication.
+- Click send reminder.
 - Within minutes, your loved one recieves a text.
-- Navigate to Reminder log to view a list of previous reminders with their time stamps
-- Delete Previous logs
+- Navigate to Reminder log to view a list of previous reminders with their time stamps.
+- Delete Previous logs to save cost of scaling to larger database volumes.
 
 ![Alt text](<Screenshot (209)-1.png>)
 ![Alt text](<Screenshot 2023-11-18 at 01.42.17-1.png>)
